@@ -70,15 +70,18 @@ document.addEventListener('mouseout', function(evt) {
 var i = 0;
 
 document.addEventListener('click', function(evt) {
-    if(evt.target.matches('.menu-icon') || evt.target.matches('.fa-bars')) {
-        document.querySelector('.list').classList.toggle('hidden');
-    }
+//     if(evt.target.matches('.menu-icon') || evt.target.matches('.fa-bars')) {
+//         document.querySelector('.list').classList.toggle('hidden');
+//     }
     if(evt.target.matches('.btn-goup') || evt.target.matches('.fa-chevron-up')) {
         window.scroll( {
             top: 0,
             behavior: "smooth"
         });
     }
+})
+menuicon.addEventListener('click', function(evt) {
+    document.querySelector('.list').classList.toggle('hidden');
 })
 var sendbtn = document.querySelector('#send');
 sendbtn.addEventListener('click', function(evt) {
