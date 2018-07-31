@@ -1,0 +1,153 @@
+.hidden {
+    display: none;
+}
+.white {
+    background-color: #ffffff !important;
+}
+.pink-text {
+    color: #f39ebc;
+}
+.line {
+    width: 140px;
+    background-color: #f39ebc;
+    line-height: 0.3;
+    margin: 0 auto;
+    border-radius: 20px 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: relative;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-size: 10px;
+    line-height: 20px;
+    left: 5px;
+    top: 3px;
+}
+.square, .fb, .gg, .yt, .tt, .it, .polyleft, .polyright {
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.square:hover {
+    color: white;
+}
+.fb:hover {
+    background-color: blue;
+}
+.gg:hover, .yt:hover {
+    background-color: red;
+}
+.tt:hover {
+    background-color: aqua;
+}
+.it:hover {
+    background-color: deeppink;
+}
+.polyleft, .polyright {
+    width: 15px;
+    height: 3px;
+    background-color: #A4A4A4;
+    position: relative;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.polyleft {
+    -webkit-transform: skewY(45deg);
+    -ms-transform: skewY(45deg);
+    transform: skewY(45deg);
+}
+.polyright {
+    -webkit-transform: skewY(-45deg);
+    -ms-transform: skewY(-45deg);
+    transform: skewY(-45deg);
+    left: 15px;
+    top: -3px;
+}
+/* ANIMATION */
+@-webkit-keyframes moveup {
+    from {top: 15px; opacity: 0;}
+    to {top:0px; opacity: 1;}
+}
+@keyframes moveup {
+    from {top: 15px; opacity: 0;}
+    to {top:0px; opacity: 1;}
+}
+@-webkit-keyframes hoverup {
+    from {top: 0px;}
+    to {top: -10px;}
+}
+@keyframes hoverup {
+    from {top: 0px;}
+    to {top: -10px;}
+}
+@-webkit-keyframes circle {
+    from {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+@keyframes circle {
+    from {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+}
+@-webkit-keyframes display {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes display {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-webkit-keyframes moveleft {
+    from {right: -80px; opacity: 0;}
+    to {right: 0px; opacity: 1;}
+}
+@keyframes moveleft {
+    from {right: -80px; opacity: 0;}
+    to {right: 0px; opacity: 1;}
+}
+@-webkit-keyframes movewidth90 {
+    from {width: 0%;}
+    to {width: 90%;}
+}
+@keyframes movewidth90 {
+    from {width: 0%;}
+    to {width: 90%;}
+}
+@-webkit-keyframes movewidth70 {
+    from {width: 0%;}
+    to {width: 70%;}
+}
+@keyframes movewidth70 {
+    from {width: 0%;}
+    to {width: 70%;}
+}
+@-webkit-keyframes movewidth50 {
+    from {width: 0%;}
+    to {width: 50%;}
+}
+@keyframes movewidth50 {
+    from {width: 0%;}
+    to {width: 50%;}
+}
+.fixed-text {
+    top: 0px;
+    opacity: 1;
+}
