@@ -80,6 +80,7 @@ document.addEventListener('click', function(evt) {
         });
     }
 })
+var menuicon = document.querySelector('.menu-icon');
 menuicon.addEventListener('click', function(evt) {
     document.querySelector('.list').classList.toggle('hidden');
 })
