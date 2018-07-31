@@ -33,8 +33,40 @@ document.addEventListener('mouseover', function(evt) {
     if(evt.target.matches('.fa')) {
         evt.target.parentElement.parentElement.classList.add('hover-up');
     }
-    if(evt.target.matches('.btn-hover')) {
-        var index = 0;
+//     if(evt.target.matches('.btn-hover')) {
+//         var index = 0;
+//         for(let i = 0; i < btnhovers.length; i++) {
+//             if(btnhovers[i].isSameNode(evt.target)) {
+//                 index = i;
+//                 break;
+//             }  
+//         }
+//         var picture = document.querySelector('.pr');
+//         if(picture.classList.contains('visible')) {
+//             picture.classList.remove('visible');
+//         }
+//          setTimeout(function() {
+//             picture.setAttribute('src', src[index]);
+//             picture.classList.add('visible');
+//          },200);
+//         var info = document.querySelector('.current-info');
+//         if(info.classList.contains('moveleft')) {
+//             info.classList.remove('moveleft');
+//         }
+//         setTimeout(function() {
+//             document.querySelector('.title-name').textContent = nameOfProject[index];
+//             document.querySelector('.language-name').textContent = language[index];
+//             document.querySelector('.tech-name').textContent = tech[index];
+//             document.querySelector('.view').setAttribute('href',link[index]);
+//             info.classList.add('moveleft');
+//         },400);
+//     }
+})
+var btnhovers = document.querySelectorAll('.btn-hover');
+for(let t = 0; t < btnhovers.length; t++) {
+    btnhover = btnhovers[t];
+    btnhover.addEventListener('mouseover', function(evt) {
+    var index = 0;
         for(let i = 0; i < btnhovers.length; i++) {
             if(btnhovers[i].isSameNode(evt.target)) {
                 index = i;
@@ -60,8 +92,8 @@ document.addEventListener('mouseover', function(evt) {
             document.querySelector('.view').setAttribute('href',link[index]);
             info.classList.add('moveleft');
         },400);
-    }
-})
+    })
+}
 document.addEventListener('mouseout', function(evt) {
     if(evt.target.matches('.square')) {
        evt.target.parentElement.classList.remove('hover-up');
