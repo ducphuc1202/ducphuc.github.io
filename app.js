@@ -10,30 +10,50 @@ document.addEventListener('mouseover', function(evt) {
     if(evt.target.matches('.about')){
         document.querySelector('.myself').classList.add('moveleft');
     }
-    if(evt.target.matches('.skill')) {
-        document.querySelector('.html').classList.add('movewidth90');
-        document.querySelector('.css').classList.add('movewidth70');
-        document.querySelector('.js').classList.add('movewidth50');
-    }
-    if(evt.target.matches('.content')) {
-        evt.target.lastElementChild.classList.add('move-up');
-        setTimeout(function() {
-            evt.target.lastElementChild.classList.add('fixed-text');
-        }, 2000);
-    }
-    if(evt.target.matches('.main-text')) {
-        evt.target.classList.add('move-up');
-        setTimeout(function() {
-            evt.target.classList.add('fixed-text');
-        }, 2000);
-    }
     if(evt.target.matches('.square')) {
         evt.target.parentElement.classList.add('hover-up');
     }
     if(evt.target.matches('.fa')) {
         evt.target.parentElement.parentElement.classList.add('hover-up');
     }
-})
+});
+
+
+
+/******************************************************************/
+var skill = document.querySelector('.skill');
+skill.addEventListener('mouseover', function(evt) {
+    document.querySelector('.html').classList.add('movewidth90');
+    document.querySelector('.css').classList.add('movewidth70');
+    document.querySelector('.js').classList.add('movewidth50');
+});
+/******************************************************************/
+
+
+
+/******************************************************************/
+var contents = document.querySelectorAll('.content');
+for(let t = 0; t < contents.length; t++) {
+    var content = contents[t];
+    var target;
+    content.addEventListener('mouseover', function(evt) {
+        if(evt.target.matches('.content')) {
+            target = evt.target;
+        }
+        else {
+            target = evt.target.parentElement;
+        }
+        target.querySelector('.main-text').classList.add('move-up');
+        setTimeout(function() {
+        target.querySelector('.main-text').classList.add('fixed-text');
+        }, 2000);
+    });
+}
+/******************************************************************/
+
+
+
+/******************************************************************/
 var btnhovers = document.querySelectorAll('.btn-hover');
 for(let t = 0; t < btnhovers.length; t++) {
     btnhover = btnhovers[t];
@@ -64,24 +84,24 @@ for(let t = 0; t < btnhovers.length; t++) {
             document.querySelector('.view').setAttribute('href',link[index]);
             info.classList.add('moveleft');
         },400);
-    })
+    });
 }
 document.addEventListener('mouseout', function(evt) {
     if(evt.target.matches('.square')) {
        evt.target.parentElement.classList.remove('hover-up');
     }
-})
+});
 var i = 0;
 
 
 /******************************************************************/
-var btngoup = document.querySelector('.btn-goup');
+var btngoup = document.querySelector('.goup');
 btngoup.addEventListener('click', function(){
     window.scroll( {
             top: 0,
             behavior: "smooth"
         });
-})
+});
 /******************************************************************/
 
 
