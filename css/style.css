@@ -237,9 +237,9 @@ img {
     -webkit-animation: movewidth90 2s linear;
     animation: movewidth90 2s linear;
 }
-.movewidth70 {
+.movewidth75 {
     -webkit-animation: movewidth70 2s linear;
-    animation: movewidth70 2s linear;
+    animation: movewidth75 2s linear;
 }
 .movewidth50 {
     -webkit-animation: movewidth50 2s linear;
@@ -410,17 +410,6 @@ img {
     border: 1px solid #fd746c;
     color: #fd746c;
     font-weight: bold;
-}
-.sended {
-    width: 30px !important;
-    height: 30px;
-    border-radius: 100%;
-    -webkit-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
 }
 #send:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(#fd746c), to(#ff9068));
