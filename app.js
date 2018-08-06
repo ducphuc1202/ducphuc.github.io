@@ -12,7 +12,7 @@ var link =["https://ducphuc1202.github.io/PROJECT_WEB_BLOG/", "https://ducphuc12
 var height = window.innerHeight;
 var pos = height - 85;
 var $goup = $('.btn-goup');
-    $goup.attr('style', 'top:' + pos + 'px');
+$goup.attr('style', 'top:' + pos + 'px');
 document.addEventListener('scroll', function(evt) {
     if(window.scrollY >= 500) {
         $goup.removeClass('hidden');
@@ -118,7 +118,7 @@ function checkLength($selector) {
     @send-form-button
 */
 $('#send').click(function(evt) {
-    evt.preventDefault();
+//    evt.preventDefault();
     if(checkLength($("#name")) && checkLength($("#mail")) && checkLength($("#form-content"))) {
         var $check = $('<i class="fa fa-check"></i>');
         $(this).text("");
@@ -127,6 +127,7 @@ $('#send').click(function(evt) {
             height: "30px",
             borderRadius: "50%"
         }, 400);
+        alert("Gui thong tin thanh cong");
     }
     else {
         alert("Vui lòng điền thông tin đầy đủ trước khi gửi");
