@@ -118,7 +118,6 @@ function checkLength($selector) {
     @send-form-button
 */
 $('#send').click(function(evt) {
-//    evt.preventDefault();
     if(checkLength($("#name")) && checkLength($("#mail")) && checkLength($("#form-content"))) {
         var $check = $('<i class="fa fa-check"></i>');
         $(this).text("");
@@ -127,9 +126,10 @@ $('#send').click(function(evt) {
             height: "30px",
             borderRadius: "50%"
         }, 400);
-        alert("Gui thong tin thanh cong");
+//        alert("Gui thong tin thanh cong");
     }
     else {
+        evt.preventDefault();
         alert("Vui lòng điền thông tin đầy đủ trước khi gửi");
     }
 })
