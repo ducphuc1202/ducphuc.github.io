@@ -119,17 +119,36 @@ function checkLength($selector) {
 */
 $('#send').click(function(evt) {
     if(checkLength($("#name")) && checkLength($("#mail")) && checkLength($("#form-content"))) {
-        var $check = $('<i class="fa fa-check"></i>');
-        $(this).text("");
-        $(this).append($check).animate({
-            width: "30px",
-            height: "30px",
-            borderRadius: "50%"
-        }, 400);
-//        alert("Gui thong tin thanh cong");
+        var data = $('#test-form').serialize();
+        var url = 'https://script.google.com/macros/s/AKfycbyao8WHMigb7nz__QWN85eR-1RMP8gr_f3QXknUyYOWmhB-cwMU/exec';
+        var setting = {
+            type: 'GET',
+            data: data,
+            dataType: 'json',
+            beforeSend: function() {
+                $('#send').text("SENDING...");
+            },
+            success: function(data) {
+//                console.log(data);
+                var $check = $('<i class="fa fa-check"></i>');
+                $('#send').text("");
+                $('#send').append($check).animate({
+                    width: "30px",
+                    height: "30px",
+                    borderRadius: "50%"
+                }, 400);
+            },
+            error: function(textStatus) {
+                $('#send').text("ERROR");
+            },
+            complete: function() {
+                // TO DO
+            }
+        }   
+        $.ajax(url, setting);
     }
     else {
-        evt.preventDefault();
         alert("Vui lòng điền thông tin đầy đủ trước khi gửi");
     }
+    evt.preventDefault();
 })
