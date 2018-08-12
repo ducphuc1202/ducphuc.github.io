@@ -5,6 +5,14 @@
     box-sizing: border-box;
     text-align: center;
 }
+/* HIDE SCROLL BAR */
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow: -moz-scrollbars-none; /* Firefox */
+}
 img {
     max-width: 100%;
     height: auoto;
